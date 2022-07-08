@@ -39,14 +39,15 @@
         android:id="@+id/tvShowTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="00:00"
         android:textSize="40dp"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.367" />
+        app:layout_constraintVertical_bias="0.309" />
 
     <Button
         android:id="@+id/BuSetTime"
@@ -57,9 +58,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.412" />
 
     <Button
         android:id="@+id/avviso"
@@ -90,9 +92,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
-        android:text="posizione auto"
+        android:text="coordinate auto"
         app:layout_constraintTop_toTopOf="@+id/avviso"
         tools:layout_editor_absoluteX="156dp" />
+
+    <Button
+        android:id="@+id/maps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="posizione auto"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="602dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
