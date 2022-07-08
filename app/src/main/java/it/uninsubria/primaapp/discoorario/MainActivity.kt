@@ -18,13 +18,13 @@ class MainActivity : AppCompatActivity() {
         val saveData=SaveData(applicationContext)
 
         tvShowTime.text= saveData.getHour().toString() + ":" + saveData.getMinute().toString()
-        bottone2.setOnClickListener {
+        buSetTime1.setOnClickListener {
             val cal = Calendar.getInstance()
             val timeSetListener = TimePickerDialog.OnTimeSetListener { view, hour, minute ->
                 cal.set(Calendar.HOUR_OF_DAY, hour)
                 cal.set(Calendar.MINUTE, minute)
 
-                mostra_tempo.text = SimpleDateFormat("HH:mm").format(cal.time)
+                time.text = SimpleDateFormat("HH:mm").format(cal.time)
             }
             TimePickerDialog(this, timeSetListener, cal.get(Calendar.HOUR_OF_DAY),
                 cal.get(Calendar.MINUTE), false).show()

@@ -76,7 +76,6 @@ class posizioneGPS : AppCompatActivity() {
     private val locationCallback = object : LocationCallback(){
         override fun onLocationResult(locationResult: LocationResult) {
             var lastLocation: Location = locationResult.lastLocation as Location
-           // Log.d("Debug:","your last last location: "+ lastLocation.longitude.toString())
             indirizzo.text = "la tua macchina era qui: Long: "+ lastLocation.longitude + " , Lat: " + lastLocation.latitude + "\n" + getCityName(lastLocation.latitude,lastLocation.longitude)
         }
     }
@@ -115,7 +114,7 @@ class posizioneGPS : AppCompatActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if(requestCode == PERMISSION_ID){
             if(grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-               // Log.d("Debug:","You have the Permission")
+
             }
         }
     }
@@ -128,7 +127,6 @@ class posizioneGPS : AppCompatActivity() {
 
         cityName = posizione.get(0).locality
         countryName = posizione.get(0).countryName
-        //Log.d("Debug:","Your City: " + cityName + " ; your Country " + countryName)
         return cityName
     }
 }

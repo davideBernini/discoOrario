@@ -9,7 +9,7 @@
 
 
     <Button
-        android:id="@+id/bottone2"
+        android:id="@+id/buSetTime1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="seleziona orario inizio"
@@ -22,13 +22,13 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
-        android:id="@+id/mostra_tempo"
+        android:id="@+id/time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="00:00"
         android:textSize="40dp"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/bottone2"
+        app:layout_constraintBottom_toTopOf="@+id/buSetTime1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

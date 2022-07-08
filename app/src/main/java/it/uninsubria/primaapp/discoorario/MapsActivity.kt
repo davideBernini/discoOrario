@@ -42,10 +42,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-        //val macchina = LatLng(location!!.latitude,location!!.longitude)
-        //mMap.addMarker(MarkerOptions().position(macchina).title("posizione macchina"))
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(macchina))
-        val ferno = LatLng(45.6,8.7)
+        val ferno = LatLng(45.6172037,8.7556296)
         mMap.addMarker(MarkerOptions().position(ferno).title("posizione macchina"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(ferno))
     }
