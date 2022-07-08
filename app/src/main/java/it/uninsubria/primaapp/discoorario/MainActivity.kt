@@ -34,6 +34,10 @@ class MainActivity : AppCompatActivity() {
             intent = Intent(this,posizioneGPS::class.java)
         startActivity(intent)
     }
+        maps.setOnClickListener {
+            intent = Intent(this,MapsActivity::class.java)
+            startActivity(intent)
+        }
     }
     fun BuSetTime(view: View){
         val popTime= PopTime()
