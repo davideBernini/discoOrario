@@ -10,75 +10,89 @@
 
     <Button
         android:id="@+id/bottone2"
-        android:layout_width="407dp"
-        android:layout_height="102dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="seleziona orario inizio"
-        android:textSize="30dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.273"
+        app:layout_constraintVertical_bias="0.195"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/mostra_tempo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="00:00"
         android:textSize="40dp"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/bottone2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.923"
+        app:layout_constraintVertical_bias="0.697"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvShowTime"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="00:00"
-        android:textSize="34sp"
+        android:textSize="40dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.367" />
+
+    <Button
+        android:id="@+id/BuSetTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="BuSetTime"
+        android:text="seleziona orario fine"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/BuSetTime"
-        android:layout_width="403dp"
-        android:layout_height="93dp"
-        android:onClick="BuSetTime"
-        android:text="seleziona orario fine"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.63" />
-
-    <Button
         android:id="@+id/avviso"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="100dp"
         android:onClick="BuSetTime2"
         android:text="a che ora vuoi essere avvisato?"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BuSetTime" />
 
     <TextView
         android:id="@+id/tvShowTime2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="40dp"
         android:text="00:00"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/avviso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BuSetTime" />
+
+    <Button
+        android:id="@+id/posizione"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="posizione auto"
+        app:layout_constraintTop_toTopOf="@+id/avviso"
+        tools:layout_editor_absoluteX="156dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

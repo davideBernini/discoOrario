@@ -6,6 +6,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -29,8 +30,10 @@ class MainActivity : AppCompatActivity() {
                 cal.get(Calendar.MINUTE), false).show()
 
         }
-
-
+        posizione.setOnClickListener {
+            intent = Intent(this,posizioneGPS::class.java)
+        startActivity(intent)
+    }
     }
     fun BuSetTime(view: View){
         val popTime= PopTime()
