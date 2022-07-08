@@ -8,14 +8,13 @@ import android.net.Uri
 import android.os.Vibrator
 import android.widget.Toast
 
-
-class myBroadcastReceiver: BroadcastReceiver() {
+class myBroadcastReceiverA: BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         val vibrator: Vibrator = context!!.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator;
         vibrator.vibrate(4000);
         if (intent!!.action.equals("com.tester.alarmmanager")) {
             var b = intent.extras
-            Toast.makeText(context, "disco orario scaduto", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "disco orario in scadenza", Toast.LENGTH_LONG).show();
         }
         var alarmUri: Uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
 
@@ -29,7 +28,3 @@ class myBroadcastReceiver: BroadcastReceiver() {
 
     }
 }
-
-
-
-

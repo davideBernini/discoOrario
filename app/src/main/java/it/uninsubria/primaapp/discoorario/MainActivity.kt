@@ -1,6 +1,8 @@
 package it.uninsubria.primaapp.discoorario
 
+import android.app.ProgressDialog.show
 import android.app.TimePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -23,12 +25,11 @@ class MainActivity : AppCompatActivity() {
 
                 mostra_tempo.text = SimpleDateFormat("HH:mm").format(cal.time)
             }
-            TimePickerDialog(
-                this, timeSetListener, cal.get(Calendar.HOUR_OF_DAY),
-                cal.get(Calendar.MINUTE), true
-            ).show()
+            TimePickerDialog(this, timeSetListener, cal.get(Calendar.HOUR_OF_DAY),
+                cal.get(Calendar.MINUTE), false).show()
 
         }
+
 
     }
     fun BuSetTime(view: View){
@@ -39,11 +40,25 @@ class MainActivity : AppCompatActivity() {
     }
     fun SetTime(Hours:Int,Minute:Int){
 
-        tvShowTime.text= "$Hours:$Minute"
+        tvShowTime.text= Hours.toString() + ":" + Minute.toString()
 
         val saveData=SaveData(applicationContext)
         saveData.SaveData(Hours,Minute)
         saveData.setAlarm()
+
+
+    }
+    fun BuSetTime2(view: View){
+        val popTimeA = popTimeA()
+        val fm2= supportFragmentManager
+        popTimeA.show(fm2,"Select time")
+
+    }
+    fun SetTime2(Hours:Int,Minute:Int){
+        tvShowTime2.text= Hours.toString() + ":" + Minute.toString()
+        val saveData=SaveDataA(applicationContext)
+        saveData.SaveDataA(Hours,Minute)
+        saveData.setAlarmA()
 
 
     }
